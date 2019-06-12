@@ -25,7 +25,7 @@ class ObjectFinder implements FinderInterface
 
     public function findAll()
     {
-        $query = $this->conn->prepare('SELECT DISTINCT id, name, currentState FROM sample.objects ORDER BY id');
+        $query = $this->conn->prepare('SELECT DISTINCT id, name, currentState FROM tiwitter.objects ORDER BY id');
         $query->execute();
         $objects = $query->fetchAll(\PDO::FETCH_ASSOC);
 
@@ -43,7 +43,7 @@ class ObjectFinder implements FinderInterface
 
     public function findOneById($id)
     {
-        $query = $this->conn->prepare('SELECT id, name, currentState FROM sample.objects WHERE id = :id');
+        $query = $this->conn->prepare('SELECT id, name, currentState FROM tiwitter.objects WHERE id = :id');
         $query->execute([':id' => $id]);
         $element = $query->fetch(\PDO::FETCH_ASSOC);
 
@@ -58,7 +58,7 @@ class ObjectFinder implements FinderInterface
 
     public function findOneByName(string $name)
     {
-        $query = $this->conn->prepare('SELECT id, name, currentState FROM sample.objects WHERE name = :name');
+        $query = $this->conn->prepare('SELECT id, name, currentState FROM tiwitter.objects WHERE name = :name');
         $query->execute([':name' => $name]);
         $element = $query->fetch(\PDO::FETCH_ASSOC);
 

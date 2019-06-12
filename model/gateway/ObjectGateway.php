@@ -75,7 +75,7 @@ class ObjectGateway
      */
     public function insert() : void
     {
-        $query = $this->conn->prepare('INSERT INTO sample.objects (name, currentState) 
+        $query = $this->conn->prepare('INSERT INTO tiwitter.objects (name, currentState) 
                                                 VALUES (:name, :currentState)');
         $executed = $query->execute([':name' => $this->name, ':currentState' => $this->currentState]);
 
@@ -90,7 +90,7 @@ class ObjectGateway
         if (!$this->id)
             throw new \Error('Instance does not exist in base');
 
-        $query = $this->conn->prepare('UPDATE sample.objects 
+        $query = $this->conn->prepare('UPDATE tiwitter.objects 
                                                 SET name = :name,
                                                 currentState = :currentState
                                                 WHERE id = :id');
@@ -105,7 +105,7 @@ class ObjectGateway
 
     public function delete() : void
     {
-        $query = $this->conn->prepare('DELETE FROM sample.object
+        $query = $this->conn->prepare('DELETE FROM tiwitter.object
                                                 WHERE id = :id AND name = :name');
         $executed = $query->execute([
             ':id' => $this->id,

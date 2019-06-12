@@ -21,7 +21,7 @@ $app = new App(new ServiceContainer());
 
 $app->setService('database', new Database(
     "127.0.0.1",
-    "sample",
+    "tiwitter",
     "root",
     "",
     ""

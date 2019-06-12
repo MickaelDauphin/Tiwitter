@@ -114,7 +114,7 @@ class UserGateway
      */
     public function insert() : void
     {
-        $query = $this->conn->prepare('INSERT INTO sample.user (firstName, familyName, username, password, email) 
+        $query = $this->conn->prepare('INSERT INTO tiwitter.user (firstName, familyName, username, password, email) 
                                                 VALUES (:firstName, :familyName, :username, :password, :email)');
         $executed = $query->execute([':firstName' => $this->firstName,
             ':familyName' => $this->familyName,
@@ -133,7 +133,7 @@ class UserGateway
         if (!$this->id)
             throw new \Error('Instance does not exist in base');
 
-        $query = $this->conn->prepare('UPDATE sample.user 
+        $query = $this->conn->prepare('UPDATE tiwitter.user 
                                                 SET firstName = :firstName,
                                                 familyName = :familyName,
                                                 username = :username,
@@ -152,7 +152,7 @@ class UserGateway
 
     public function delete() : void
     {
-        $query = $this->conn->prepare('DELETE FROM sample.user
+        $query = $this->conn->prepare('DELETE FROM tiwitter.user
                                                 WHERE id = :id AND username = :username AND password = :password');
         $executed = $query->execute([
             ':id' => $this->id,
