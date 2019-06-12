@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 
 <head>
-   <title>Sampl'é</title>
+   <title>Tiwitter</title>
    <meta charset="utf-8" />
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-   <link rel="stylesheet" href="css/CSS.css" />
-    <link rel="icon" href="../images/logo.ico"/>
+   <!--<link rel="stylesheet" href="css/CSS.css" />
+    <link rel="icon" href="../images/logo.ico"/>-->
 </head>
 
 
 <body>
       
-   	<h1> Sampl'é </h1>
+   	<h1> Tiwitter </h1>
 
-   <img src="images/icon_log.svg" alt="image" title="icon_login" width="30%"/>
+   <!--<img src="images/icon_log.svg" alt="image" title="icon_login" width="30%"/>-->
 
     <?php
 
