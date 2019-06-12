@@ -28,7 +28,7 @@
     if(isset($params['registered'])) {
         echo "
            <p style='color: green' align='center'>
-           Vous avez bien été enregistré, un couriel de confirmation vous a été envoyé.
+           Vous avez bien été enregistré !
            </p>
         ";
     }
