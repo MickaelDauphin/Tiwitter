@@ -128,23 +128,46 @@ class UserGateway
             $this->id = $this->conn->lastInsertId();
     }
 
-    public function update() : void
+    public function update(bool $withPassword = false) : void
     {
         if (!$this->id)
             throw new \Error('Instance does not exist in base');
 
-        $query = $this->conn->prepare('UPDATE tiwitter.user 
+        if ($withPassword)
+        {
+            $query = $this->conn->prepare('UPDATE tiwitter.user 
                                                 SET firstName = :firstName,
                                                 familyName = :familyName,
                                                 username = :username,
                                                 password = :password,
                                                 email = :email
                                                 WHERE id = :id');
-        $executed = $query->execute([
-            ':familyName' => $this->familyName,
-            ':username' => $this->username,
-            ':password' => $this->password,
-            ':email' => $this->email]);
+            $executed = $query->execute([
+                ':id' => $this->id,
+                ':firstName' => $this->firstName,
+                ':familyName' => $this->familyName,
+                ':username' => $this->username,
+                ':password' => $this->password,
+                ':email' => $this->email
+            ]);
+        }
+        else
+        {
+            $query = $this->conn->prepare('UPDATE tiwitter.user 
+                                                SET firstName = :firstName,
+                                                familyName = :familyName,
+                                                username = :username,
+                                                email = :email
+                                                WHERE id = :id');
+            $executed = $query->execute([
+                ':id' => $this->id,
+                ':firstName' => $this->firstName,
+                ':familyName' => $this->familyName,
+                ':username' => $this->username,
+                ':email' => $this->email
+            ]);
+        }
+
 
         if (!$executed)
             throw new \Error('Update failed');
