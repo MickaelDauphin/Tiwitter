@@ -31,6 +31,11 @@
 	<a href="../view/Favorites.php"><img src="../images/PLUS.png" id="Favoris"></a>-->
 
 </body>
-
+<footer>
+    <form action="/">
+        <br/>
+        <button type="login">Déconnecter</button>
+    </form>
+</footer>
 </html>
 
