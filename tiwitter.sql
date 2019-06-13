@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 12 juin 2019 à 13:35
+-- Généré le :  jeu. 13 juin 2019 à 08:41
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `tiwitter`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tiwit`
+--
+
+CREATE TABLE `tiwit` (
+  `id` int(11) NOT NULL,
+  `utilisateur` varchar(20) NOT NULL,
+  `contenu` varchar(140) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -50,6 +62,12 @@ INSERT INTO `user` (`id`, `username`, `password`, `firstName`, `familyName`, `em
 --
 
 --
+-- Index pour la table `tiwit`
+--
+ALTER TABLE `tiwit`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
@@ -58,6 +76,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `tiwit`
+--
+ALTER TABLE `tiwit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `user`
