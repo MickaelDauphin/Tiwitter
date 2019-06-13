@@ -173,5 +173,15 @@ class UserGateway
         $this->familyName = $elements['familyName'];
         $this->email = $elements['email'];
     }
+    public function toArray() : array
+    {
+        return [
+            'id' => $this->id,
+            'username' => $this->username,
+            'firstName' => $this->firstName,
+            'familyName' => $this->familyName,
+            'email' => $this->email,
+        ];
+    }
 
 }

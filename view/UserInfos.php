@@ -105,7 +105,7 @@ if (isset($params['success']))
     <button type="register">Retour</button>
 </form>
 
-<script src="js/classie.js"></script>
+<!--<script src="js/classie.js"></script>
 <script>
     (function() {
         // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
@@ -140,7 +140,7 @@ if (isset($params['success']))
             }
         }
     })();
-</script>
+</script>-->
 
 <footer>
     <p></p>

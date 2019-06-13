@@ -110,13 +110,15 @@ class App
 
 
     /**
-     * Launch the php app
+     * Launch the php App
      *
      * @param Request|null $request
      * @throws \Exception
      */
     public function run(Request $request = null)
     {
+        $this->createSession();
+
         if ($request === null)
             $request = Request::createFromGlobals();
 
@@ -147,7 +149,7 @@ class App
             $arguments = $route->getArguments();
             array_unshift($arguments, $request);
             $content = call_user_func_array($route->getCallable(), $arguments);
-            
+
             if ($content instanceof Response)
             {
                 $content->send();
@@ -163,7 +165,7 @@ class App
         }
         catch (\Exception $e)
         {
-            throw new Error(('There was an error during the processing of your request'));
+            throw new Error(('There was an error during the processing of your Request'));
         }
     }
 
@@ -178,6 +180,47 @@ class App
     private function registerRoute(string $method, string $pattern, callable $callable)
     {
         $this->routes[] = new Route($method,$pattern, $callable);
+    }
+
+    /**
+     * Create new session
+     */
+    public function createSession() : void
+    {
+        session_start(); // Create a new session
+    }
+
+    /**
+     * Destroy current session
+     */
+    public function destroySession() : void
+    {
+        session_destroy(); // Destruction  de la sesion courante
+    }
+
+    /**
+     * Return parameter name from current session array
+     *
+     * @param string $name
+     * @return mixed|null
+     */
+    public function getSessionParameters(string $name)
+    {
+        if (isset($_SESSION[$name]))
+            return $_SESSION[$name];
+        else
+            return null;
+    }
+
+    /**
+     * Set session's parameter
+     *
+     * @param string $name
+     * @param $parameter
+     */
+    public function setSessionParameters(string $name, $parameter) : void
+    {
+        $_SESSION[$name] = $parameter;
     }
 
 }

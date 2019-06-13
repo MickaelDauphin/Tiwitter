@@ -14,7 +14,7 @@
 	<h1>Tiwitter</h1>
 	<!--<img id="logo" src="../images/logo.png" alt="image" title="icon_login"/>-->
 
-    <h2>Identity : <?php echo $params['username']; ?></h2>
+    <h2>Identité : <a id="Name" href="/user"><?php echo  $params['app']->getSessionParameters('user')['username']; ?></a></h2>
 
     <!--
 	<img src="../images/TVr.png" id="TV" onclick="changeState('TV', ['TVr.png', 'TVg.png'])"/>
@@ -29,6 +29,7 @@
 
     <script type="text/javascript">start(objectList);</script>
 	<a href="../view/Favorites.php"><img src="../images/PLUS.png" id="Favoris"></a>-->
+
 
 </body>
 <footer>

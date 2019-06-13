@@ -29,12 +29,9 @@ class Routing
     {
         $user = new UserController($this->app);
 
-        $this->app->get('/', function ()
-        {
-            return $this->app->getService('render')('index');
-        });
+        $this->app->get('/', [$user, 'LoginHandler']);
 
-        $this->app->post('/login', [$user, 'UserHandler']);
+        $this->app->post('/login', [$user, 'LoginDBHandler']);
 
         $this->app->get('/register', [$user, 'RegisterHandler']);
 
@@ -44,5 +41,16 @@ class Routing
 
         $this->app->get('/home/(\d+)', [$user, 'HomeHandler']);
 
+        $this->app->get('/home/camera', [$user, 'CameraHandler']);
+
+        $this->app->get('/home/camera/get', function () {
+            $image = fopen("/images/motion/image.txt", "r") or die("Unable to open file!");
+            echo fread($image, filesize("/images/motion/image.txt"));
+            fclose($image);
+        });
+
+        $this->app->get('/user', [$user, 'UserHandler']);
+
+        $this->app->post('/user/update', [$user, 'UserDBUpdate']);
+        }
     }
-}

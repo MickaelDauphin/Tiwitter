@@ -10,7 +10,7 @@
 
 <body>
 
-<h1> Register </h1>
+<h1> S'enregister </h1>
 
 <?php if(isset($params['!registered'])) {
     echo "
@@ -18,25 +18,94 @@
            Une erreur est survenue, veuillez réessayer.
            </p>
         ";
-} ?>
+}
+
+if (isset($params['passwordError']))
+{
+    echo "
+           <p style='color: red' align='center'>
+           Les mots de passes sont différents, veuillez vérifier votre saisie.
+           </p>
+        ";
+}
+
+if (isset($params['userExist']))
+{
+    echo "
+           <p style='color: red' align='center'>
+           Cet utilisateur existe déjà.
+           </p>
+        ";
+}
+?>
+
 
 <div class="container">
-    <form action="/tryRegister" method="post">
-        <input type="username" placeholder="Enter your first name" name="firstName" required>
-        <br>
-        <br>
-        <input type="username" placeholder="Enter your family name" name="familyName" required>
-        <br>
-        <br>
-        <input type="username" placeholder="Enter an username" name="username" required>
-        <br>
-        <br>
-        <input type="password" placeholder="Enter a password" name="password" required>
-        <br>
-        <br>
-        <input type="email" placeholder="Enter your email" name="email" required>
+    <form action="/tryRegister" method="post" autocomplete="off">
 
-        <button type="submit">Submit</button>
+        <!-- Prénom -->
+        <section class="content">
+        <span class="input input--kaede">
+            <input class="input__field input__field--kaede" type="text" id="input-1" name="firstName" minlength="3" maxlength="40" required />
+            <label class="input__label input__label--kaede" for="input-1">
+        <span class="input__label-content input__label-content--kaede">Entrez votre prénom</span>
+            </label>
+        </span>
+            <br>
+
+            <!-- Nom -->
+            <span class="input input--kaede">
+            <input class="input__field input__field--kaede" type="text" id="input-2" name="familyName" minlength="3" maxlength="40" required/>
+            <label class="input__label input__label--kaede" for="input-2">
+        <span class="input__label-content input__label-content--kaede">Entrez votre nom</span>
+            </label>
+        </span>
+        </section>
+
+        <!-- Username -->
+        <section class="content">
+        <span class="input input--kaede">
+            <input class="input__field input__field--kaede" type="text" id="input-3" name="username" minlength="4" maxlength="40" required />
+            <label class="input__label input__label--kaede" for="input-3">
+        <span class="input__label-content input__label-content--kaede">Entrez un nom d'utilisateur</span>
+            </label>
+        </span>
+            <br>
+
+            <!-- Password -->
+            <span class="input input--kaede">
+            <input class="input__field input__field--kaede" type="password" id="input-4" name="password" minlength="6" maxlength="80" required/>
+            <label class="input__label input__label--kaede" for="input-4">
+        <span class="input__label-content input__label-content--kaede">Entrez un mot de passe</span>
+            </label>
+        </span>
+        </section>
+
+        <!-- Password Re -->
+        <section class="content">
+        <span class="input input--kaede">
+            <input class="input__field input__field--kaede" type="password" id="input-5" name="passwordConfirm" minlength="6" maxlength="80" required />
+            <label class="input__label input__label--kaede" for="input-5">
+        <span class="input__label-content input__label-content--kaede">Confirmez le mot de passe</span>
+            </label>
+        </span>
+            <br>
+
+            <!-- Email -->
+            <span class="input input--kaede">
+            <input class="input__field input__field--kaede" type="text" id="input-6" name="email" minlength="4" maxlength="80" required/>
+            <label class="input__label input__label--kaede" for="input-6">
+        <span class="input__label-content input__label-content--kaede">Entrez un courriel</span>
+            </label>
+        </span>
+        </section>
+
+
+        <!-- Button -->
+        <button type="submit">Confirmer</button>
+    </form>
+    <form action="/">
+        <button type="back">Retour</button>
     </form>
 </div>
 

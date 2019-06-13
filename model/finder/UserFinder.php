@@ -86,4 +86,18 @@ class UserFinder implements FinderInterface
             return false;
         }
     }
+    public function findOneByName($strIdentity)
+    {
+        $query = $this->conn->prepare('SELECT id, username, password, firstName, familyName, email FROM tiwitter.user WHERE (username = :name OR email = :email)');
+        $query->execute([':name' => $strIdentity, ':email' => $strIdentity]);
+        $element = $query->fetch(\PDO::FETCH_ASSOC);
+
+        if (!is_countable($element) or count($element) === 0)
+            return null;
+
+        $user = new UserGateway($this->app);
+        $user->hydrate($element);
+
+        return $user;
+    }
 }
