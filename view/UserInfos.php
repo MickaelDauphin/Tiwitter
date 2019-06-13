@@ -51,6 +51,7 @@ if (isset($params['success']))
         <span class="input__label-content input__label-content--kaede">Entrez un nom d'utilisateur</span>
             </label>
         </span>
+        <br>
 
         <!-- Nom -->
         <span class="input input--kaede">
@@ -78,6 +79,7 @@ if (isset($params['success']))
         <span class="input__label-content input__label-content--kaede">Entrez un email</span>
             </label>
         </span>
+        <br>
 
         <!-- Password -->
         <span class="input input--kaede">
