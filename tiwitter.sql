@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 13 juin 2019 à 08:41
+-- Généré le :  ven. 14 juin 2019 à 17:12
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -43,7 +43,7 @@ CREATE TABLE `tiwit` (
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(200) NOT NULL,
   `firstName` varchar(20) NOT NULL,
   `familyName` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL
@@ -55,7 +55,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `firstName`, `familyName`, `email`) VALUES
 (1, 'lerems', 'test', 'remy', 'crespe', 'le@rems'),
-(4, 'default', 'default', 'default', 'default', 'default@default');
+(4, 'default', 'default', 'default', 'default', 'default@default'),
+(6, 'mickael', 'e10adc3949ba59abbe56e057f20f883e', 'dauphin', 'dauphin', 'mickael@etu');
 
 --
 -- Index pour les tables déchargées
@@ -87,7 +88,7 @@ ALTER TABLE `tiwit`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
