@@ -27,6 +27,13 @@ class UserGateway
         $this->conn = $app->getService('database')->getConnection();
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * @return mixed
@@ -191,7 +198,10 @@ class UserGateway
     {
         $this->id = $elements['id'];
         $this->username = $elements['username'];
-        $this->password = $elements['password'];
+
+        if (isset($elements['password']))
+            $this->password = $elements['password'];
+
         $this->firstName = $elements['familyName'];
         $this->familyName = $elements['familyName'];
         $this->email = $elements['email'];

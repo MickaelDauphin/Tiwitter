@@ -5,6 +5,7 @@ namespace Controllers;
 use App\Src\App;
 use App\Src\Request\Request;
 use Model\Finder\UserFinder;
+use Model\Gateway\UserGateway;
 
 class UserController extends ControllerBase
 {
