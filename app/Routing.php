@@ -23,7 +23,7 @@ class Routing
     public function setup()
     {
         $user = new UserController($this->app);
-        $tiwit = new TiwitController($this->app);
+        //$tiwit = new TiwitController($this->app);
 
         $this->app->get('/', [$user, 'LoginHandler']);
 
