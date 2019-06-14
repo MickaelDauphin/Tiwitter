@@ -4,6 +4,7 @@ namespace App;
 
 use App\Src\App;
 use App\Src\Request\Request;
+use Controllers\TiwitController;
 use Controllers\UserController;
 
 class Routing
@@ -22,6 +23,7 @@ class Routing
     public function setup()
     {
         $user = new UserController($this->app);
+        $tiwit = new TiwitController($this->app);
 
         $this->app->get('/', [$user, 'LoginHandler']);
 
@@ -46,5 +48,7 @@ class Routing
         $this->app->get('/user', [$user, 'UserHandler']);
 
         $this->app->post('/user/update', [$user, 'UserDBUpdate']);
+
+        //$this->app->post('/twit',[$tiwit, ]);
         }
     }

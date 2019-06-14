@@ -9,8 +9,8 @@ use Model\Gateway\UserGateway;
 
 class UserController extends ControllerBase
 {
-    /**
-* @var static String User connected now
+ /**
+ @var static String User connected now
 */
 
     public function __construct(App $app)
