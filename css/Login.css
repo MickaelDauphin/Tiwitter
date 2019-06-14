@@ -1,0 +1,42 @@
+body {
+    background-color: #ffc799;
+}
+h1
+{
+    text-align : center;
+    color: red;
+    font-size: 225%;
+}
+
+input[type=username], input[type=password]{
+    text-align : center;
+    width: 30%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button[type=login], button[type=register] {
+
+    color: red;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
+input:focus
+{
+    background-color: #7FC6BC;
+}
+
+button:focus
+{
+    background-color: #7FC6BC;
+}
+
+button:hover
+{
+    background-color: #7FC6BC;
+}

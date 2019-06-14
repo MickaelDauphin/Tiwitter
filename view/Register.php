@@ -4,8 +4,8 @@
     <title>Tiwitter</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <!--<link rel="stylesheet" href="../css/register.css" />
-    <link rel="icon" href="../images/logo.ico"/>-->
+    <link rel="stylesheet" href="../css/Register.css" />
+    <!--<link rel="icon" href="../images/logo.ico"/>-->
 </head>
 
 <body>

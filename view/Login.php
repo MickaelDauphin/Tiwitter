@@ -4,8 +4,8 @@
    <title>Tiwitter</title>
    <meta charset="utf-8" />
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-   <!--<link rel="stylesheet" href="css/CSS.css" />
-    <link rel="icon" href="../images/logo.ico"/>-->
+   <link rel="stylesheet" href="css/Login.css" />
+    <!--<link rel="icon" href="../images/logo.ico"/>-->
 </head>
 
 
@@ -33,10 +33,10 @@
         ";
     }
     ?>
-
+<br><br>
    <div class="container">
        <form action="/login", method="post">
-           <input type="id" placeholder="Enter Username" name="username" required>
+           <input type="username" placeholder="Enter Username" name="username" required>
            <br>
            <br>
            <input type="password" placeholder="Enter Password" name="password" required>
