@@ -40,24 +40,20 @@ if (isset($params['userExist']))
 ?>
 
 
-<div class="container">
     <form action="/tryRegister" method="post" autocomplete="off">
 
         <!-- Prénom -->
         <section class="content">
         <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="text" id="input-1" name="firstName" minlength="3" maxlength="40" required />
-            <label class="input__label input__label--kaede" for="input-1">
-        <span class="input__label-content input__label-content--kaede">Entrez votre prénom</span>
+            <input class="input__field input__field--kaede" type="text" id="input-1" name="firstName" minlength="3" maxlength="40" placeholder="Entrez votre prénom" required />
             </label>
         </span>
             <br>
 
             <!-- Nom -->
             <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="text" id="input-2" name="familyName" minlength="3" maxlength="40" required/>
+            <input class="input__field input__field--kaede" type="text" id="input-2" name="familyName" minlength="3" maxlength="40" placeholder="Entrez votre nom" required/>
             <label class="input__label input__label--kaede" for="input-2">
-        <span class="input__label-content input__label-content--kaede">Entrez votre nom</span>
             </label>
         </span>
         </section>
@@ -65,18 +61,16 @@ if (isset($params['userExist']))
         <!-- Username -->
         <section class="content">
         <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="text" id="input-3" name="username" minlength="4" maxlength="40" required />
+            <input class="input__field input__field--kaede" type="text" id="input-3" name="username" minlength="4" maxlength="40" placeholder="Entrez votre nom d'utilisateur" required />
             <label class="input__label input__label--kaede" for="input-3">
-        <span class="input__label-content input__label-content--kaede">Entrez un nom d'utilisateur</span>
             </label>
         </span>
             <br>
 
             <!-- Password -->
             <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="password" id="input-4" name="password" minlength="6" maxlength="80" required/>
+            <input class="input__field input__field--kaede" type="password" id="input-4" name="password" minlength="6" maxlength="80" placeholder="Entrez un mot de passe" required/>
             <label class="input__label input__label--kaede" for="input-4">
-        <span class="input__label-content input__label-content--kaede">Entrez un mot de passe</span>
             </label>
         </span>
         </section>
@@ -84,21 +78,20 @@ if (isset($params['userExist']))
         <!-- Password Re -->
         <section class="content">
         <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="password" id="input-5" name="passwordConfirm" minlength="6" maxlength="80" required />
+            <input class="input__field input__field--kaede" type="password" id="input-5" name="passwordConfirm" minlength="6" maxlength="80" placeholder="Confirmez le mot de passe" required />
             <label class="input__label input__label--kaede" for="input-5">
-        <span class="input__label-content input__label-content--kaede">Confirmez le mot de passe</span>
             </label>
         </span>
             <br>
 
             <!-- Email -->
             <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="text" id="input-6" name="email" minlength="4" maxlength="80" required/>
+            <input class="input__field input__field--kaede" type="text" id="input-6" name="email" minlength="4" maxlength="80" placeholder="Entrez un email" required/>
             <label class="input__label input__label--kaede" for="input-6">
-        <span class="input__label-content input__label-content--kaede">Entrez un courriel</span>
             </label>
         </span>
         </section>
+        <br>
 
 
         <!-- Button -->
@@ -107,7 +100,6 @@ if (isset($params['userExist']))
     <form action="/">
         <button type="back">Retour</button>
     </form>
-</div>
 
 <footer>
     <p></p>

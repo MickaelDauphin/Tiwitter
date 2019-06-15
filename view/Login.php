@@ -34,21 +34,19 @@
     }
     ?>
 <br><br>
-   <div class="container">
        <form action="/login", method="post">
-           <input type="username" placeholder="Enter Username" name="username" required>
+           <input type="username" placeholder="Entrez votre nom d'utilisateur" name="username" required>
            <br>
            <br>
-           <input type="password" placeholder="Enter Password" name="password" required>
+           <input type="password" placeholder="Entrez votre mot de passe" name="password" required>
            <br>
            <br>
-
-           <button type="login">Login</button>
+           <br>
+           <button type="login">Se connecter</button>
        </form>
    <form action="/register">
-      <button type="register">Register</button>
+      <button type="register">S'enregistrer</button>
     </form>
-   </div>
 
    <footer>
       <p></p>

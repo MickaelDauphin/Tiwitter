@@ -11,6 +11,7 @@ h1
 input[type=username], input[type=password]{
     text-align : center;
     width: 30%;
+    margin-left : 35%;
     padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -18,25 +19,19 @@ input[type=username], input[type=password]{
 }
 
 button[type=login], button[type=register] {
-
     color: red;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 8px 35%;
     border: none;
     cursor: pointer;
     width: 30%;
 }
 input:focus
 {
-    background-color: #7FC6BC;
-}
-
-button:focus
-{
-    background-color: #7FC6BC;
+    background-color: deepskyblue;
 }
 
 button:hover
 {
-    background-color: #7FC6BC;
+    background-color: dodgerblue;
 }
