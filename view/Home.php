@@ -22,8 +22,8 @@
     <script type="text/javascript">
         var objectList = <?php echo $params['objectList'] ?>;
     </script>
-    <textarea type="text" size="140" rows="4" cols="100" maxlength="140" placeholder="Entrez un texte à tiwiter..." name="tiwit" required></textarea>
-    <button>Tiwiter</button>
+    <textarea type="text" size="140" rows="4" cols="100" maxlength="140" placeholder="Entrez un texte à tiwiter (140 caractères max)" name="tiwit" required></textarea>
+    <button type="tiwiter">Tiwiter</button>
     <!--<img src="../images/TVr.png" id="TV" onclick="changeState('TV', ['TVr.png', 'TVg.png'], objectList[0]);" />
 	<img src="../images/PCr.png" id="PC" onclick="changeState('PC', ['PCr.png', 'PCg.png'], objectList[1]);"/>
 
@@ -35,7 +35,7 @@
 <footer>
     <form action="/">
         <br/>
-        <button type="login">Déconnecter</button>
+        <button type="disconnect">Se déconnecter</button>
     </form>
 </footer>
 </html>

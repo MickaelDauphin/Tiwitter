@@ -4,7 +4,7 @@
     <title>Tiwitter</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-
+    <link rel="stylesheet" href="../css/User.css" />
 </head>
 
 <body>
@@ -42,69 +42,27 @@ if (isset($params['success']))
 <h2 align="center">Identité : <?php $user = $params['app']->getSessionParameters('user'); echo $user['username']; ?> </h2>
 
 <form action="/user/update" method="post">
-
     <!-- Username -->
-    <section class="content">
-        <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="text" id="input-1" value="<?php echo $user['username']; ?>" name="username" minlength="4" maxlength="40" required />
-            <label class="input__label input__label--kaede" for="input-1">
-        <span class="input__label-content input__label-content--kaede">Entrez un nom d'utilisateur</span>
-            </label>
-        </span>
-        <br>
-
-        <!-- Nom -->
-        <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="text" id="input-2" value="<?php echo $user['familyName']; ?>" name="familyName" minlength="3" maxlength="40" required/>
-            <label class="input__label input__label--kaede" for="input-2">
-        <span class="input__label-content input__label-content--kaede">Entrez un nom</span>
-            </label>
-        </span>
-    </section>
-
+    <input type="text" id="input-1" value="<?php echo $user['username']; ?>" name="username" minlength="4" maxlength="40" placeholder="Entrez votre nom d'utilisateur" required />
+    <br>
+    <!-- Nom -->
+    <input type="text" id="input-2" value="<?php echo $user['familyName']; ?>" name="familyName" minlength="3" maxlength="40" placeholder="Entrez votre nom" required/>
     <!-- Prénom -->
-    <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="text" id="input-3" value="<?php echo $user['firstName']; ?>" name="firstName" minlength="3" maxlength="40" required/>
-            <label class="input__label input__label--kaede" for="input-3">
-        <span class="input__label-content input__label-content--kaede">Entrez un prénom</span>
-            </label>
-        </span>
-    </section>
-
+    <input type="text" id="input-3" value="<?php echo $user['firstName']; ?>" name="firstName" minlength="3" maxlength="40" placeholder="Entrez votre prénom" required/>
     <!-- Email -->
-    <section class="content">
-        <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="text" id="input-4" value="<?php echo $user['email']; ?>" name="email" minlength="4" maxlength="80" required />
-            <label class="input__label input__label--kaede" for="input-4">
-        <span class="input__label-content input__label-content--kaede">Entrez un email</span>
-            </label>
-        </span>
-        <br>
-
-        <!-- Password -->
-        <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="password" id="input-5" value="" name="password" minlength="6" maxlength="80"/>
-            <label class="input__label input__label--kaede" for="input-5">
-        <span class="input__label-content input__label-content--kaede">Entez un mot de passe</span>
-            </label>
-        </span>
-    </section>
-
+    <input type="text" id="input-4" value="<?php echo $user['email']; ?>" name="email" minlength="4" maxlength="80" placeholder="Entrez votre email" required />
+    <br>
+    <!-- Password -->
+    <input type="password" id="input-5" value="" name="password" minlength="6" maxlength="80" placeholder="Entrez votre nouveau mot de passe (si changement)"/>
     <!-- Password Re -->
-    <section class="content">
-        <span class="input input--kaede">
-            <input class="input__field input__field--kaede" type="password" id="input-6" value="" name="passwordConfirm" minlength="6" maxlength="80" />
-            <label class="input__label input__label--kaede" for="input-6">
-        <span class="input__label-content input__label-content--kaede">Confirmez le mot de passe</span>
-            </label>
-        </span>
-    </section>
+    <input type="password" id="input-6" value="" name="passwordConfirm" minlength="6" maxlength="80" placeholder="Confirmez votre nouveau mot de passe (si changement)" />
+    <br><br>
 
-    <button type="login">Enregistrer les modifications</button>
+    <button type="save">Enregistrer les modifications</button>
 </form>
 
 <form action="/home">
-    <button type="register">Retour</button>
+    <button type="return">Retour</button>
 </form>
 
 <!--<script src="js/classie.js"></script>
