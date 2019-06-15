@@ -23,6 +23,7 @@ button[type=disconnect], button[type=tiwiter] {
     border: none;
     cursor: pointer;
     width: 30%;
+    border-radius:12px;
 }
 button[type=tiwiter] {
     color: blue;
@@ -31,10 +32,12 @@ button[type=tiwiter] {
     border: none;
     cursor: pointer;
     width: 20%;
+    border-radius:12px;
 }
 textarea{
     text-align:center;
     margin: 8px 28%;
+    border-radius:12px;
 }
 input:focus
 {

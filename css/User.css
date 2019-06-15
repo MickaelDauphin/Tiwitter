@@ -19,6 +19,7 @@ input[type=text], input[type=password]{
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius:12px;
 }
 
 button[type=save], button[type=return] {
@@ -28,6 +29,7 @@ button[type=save], button[type=return] {
     border: none;
     cursor: pointer;
     width: 30%;
+    border-radius:12px;
 }
 input:focus
 {

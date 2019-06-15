@@ -16,6 +16,7 @@ input[type=username], input[type=password]{
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius:12px;
 }
 
 button[type=login], button[type=register] {
@@ -25,6 +26,7 @@ button[type=login], button[type=register] {
     border: none;
     cursor: pointer;
     width: 30%;
+    border-radius:12px;
 }
 input:focus
 {
