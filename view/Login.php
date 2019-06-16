@@ -37,12 +37,12 @@
            <div class="group">
                <input type="username" name="username" required>
                <span class="highlight"></span><span class="bar"></span>
-               <label>Username</label>
+               <label>Nom d'utilisateur</label>
            </div>
            <div class="group">
                 <input type="password" name="password" required>
                 <span class="highlight"></span><span class="bar"></span>
-               <label>Password</label>
+               <label>Mot de passe</label>
            </div>
            <div class="centered">
                <button class="button">Se connecter</button>
