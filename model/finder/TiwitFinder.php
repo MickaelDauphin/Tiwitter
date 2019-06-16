@@ -8,6 +8,10 @@
 
 namespace Model\Finder;
 
+use model\gateway\PostGateway;
+use model\gateway\UserGateway;
+use model\finder\FinderInterface;
+use app\src\App;
 
 class TiwitFinder implements FinderInterface
 {
@@ -15,4 +19,6 @@ class TiwitFinder implements FinderInterface
         $this->app = $app;
         $this->conn = $this->app->getService('database')->getConnection();
     }
+    public function findAll(){}
+    public function findOneById($id){}
 }

@@ -8,7 +8,7 @@
 
 namespace Model\Gateway;
 
-use App\Src\App
+use App\Src\App;
 
 class TiwitGateway
 {
