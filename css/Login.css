@@ -1,11 +1,11 @@
 body {
     /*background-color: #ffc799;*/
-    background-image :url(../images/background.jpg);
+    background-image :url(../images/background2.jpg);
 }
 h1
 {
     text-align : center;
-    color: red;
+    color: darkorange;
     font-size: 225%;
 }
 
@@ -21,8 +21,9 @@ input[type=username], input[type=password]{
 }
 input:focus
 {
-    background-color: deepskyblue;
+    background-color: darkorange;
 }
+
 /*button[type=login], button[type=register] {
     color: red;
     padding: 14px 20px;
