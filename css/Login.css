@@ -187,7 +187,7 @@ label {
     text-align: center;
     font-size: 40px;
     font-family: 'Josefin Sans',sans-serif;
-    background: linear-gradient(to right, #fe5353 10%, #febf53 50%, #fe5353 60%);
+    background: linear-gradient(to right, #febf53 10%, #fe5353 50%, #febf53 60%);
     background-size: 200% auto;
     text-fill-color: transparent;
     -webkit-background-clip: text;
