@@ -117,10 +117,12 @@ class App
             $request = Request::createFromGlobals();
 
         $method = $request->getMethod();
+
         $uri = $request->getUri();
 
         foreach ($this->routes as $route)
         {
+
             if ($route->match($method, $uri))
             {
                 return $this->process($route, $request);
@@ -159,7 +161,7 @@ class App
         }
         catch (\Exception $e)
         {
-            throw new Error(('There was an error during the processing of your Request'));
+            throw new \Error(('There was an error during the processing of your Request'));
         }
     }
 
