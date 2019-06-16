@@ -5,7 +5,6 @@
    <meta charset="utf-8" />
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
    <link rel="stylesheet" href="../css/Login.css" />
-    <script src="../js/Login.js"></script>
     <!--<link rel="icon" href="../images/logo.ico"/>-->
 </head>
 
