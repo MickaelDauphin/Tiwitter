@@ -16,22 +16,27 @@
     <script type="text/javascript">
         var objectList = <?php echo $params['objectList'] ?>;
     </script>
+    <div class="centeredTexteArea">
     <form>
     <div class="group">
         <textarea type="text" rows="6" maxlength="140" name="tiwit" required></textarea>
         <span class="highlight"></span><span class="bar"></span>
         <label>Entrez un texte à tiwiter (140 caractères max)</label>
     </div>
-    </form>
+    </form></div>
+    <div class="centeredButton">
     <form action="/home/tiwit">
     <button class="button">Tiwiter</button>
     </form>
+    </div>
 
 </body>
 <footer>
+    <div class="centeredButton">
     <form action="/">
         <button class="button">Se déconnecter</button>
     </form>
+    </div>
 </footer>
 </html>
 

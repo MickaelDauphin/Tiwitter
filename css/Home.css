@@ -78,7 +78,7 @@ body {
 }
 form {
     width: 320px;
-    margin: 45px auto;
+    margin : 45px;
 }
 form h1 {
     font-size: 3em;
@@ -92,7 +92,7 @@ textarea {
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 320px;
+    width: 600px;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid #c6c6c6;
@@ -111,7 +111,7 @@ textarea:valid ~ label {
 }
 input:focus ~ .bar:before,
 textarea:focus ~ .bar:before {
-    width: 320px;
+    width: 600px;
 }
 
 input[type="password"] {
@@ -168,4 +168,11 @@ h2{
     font-size: 2em;
     text-align: center;
     color:white;
+}
+
+.centeredTexteArea{
+    margin-left : 32%;
+}
+.centeredButton{
+    margin-left : 39%;
 }
