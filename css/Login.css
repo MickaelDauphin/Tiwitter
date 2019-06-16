@@ -1,5 +1,6 @@
 body {
-    background-color: #ffc799;
+    /*background-color: #ffc799;*/
+    background-image :url(../images/background.jpg);
 }
 h1
 {
