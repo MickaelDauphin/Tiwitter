@@ -42,6 +42,6 @@ class Routing
 
         $this->app->post('/user/update', [$user, 'UserDBUpdate']);
 
-        $this->app->post('/home/twit',[$tiwit, ]);
+        $this->app->post('/home/tiwit',[$tiwit, 'TiwitDBHandler']);
         }
     }
