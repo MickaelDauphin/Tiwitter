@@ -20,7 +20,7 @@
     if(isset($params['accessDenied'])) {
         echo "
            <p style='color: red' align='center'>
-           Une erreur est survenue.
+           Identifiants incorrects !
            </p>
         ";
     }
