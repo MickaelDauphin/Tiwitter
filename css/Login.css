@@ -144,7 +144,7 @@ textarea:focus ~ label,
 textarea:valid ~ label {
     top: -14px;
     font-size: 12px;
-    color: #2196F3;
+    color: #ffb22e;
 }
 input:focus ~ .bar:before,
 textarea:focus ~ .bar:before {
@@ -156,7 +156,7 @@ input[type="password"] {
 }
 
 label {
-    color: #c6c6c6;
+    color: #febf53;
     font-size: 16px;
     font-weight: normal;
     position: absolute;
@@ -177,7 +177,7 @@ label {
     width: 0;
     bottom: 0px;
     position: absolute;
-    background: #2196F3;
+    background: #febf53;
     transition: 300ms ease all;
     left: 0%;
 }
