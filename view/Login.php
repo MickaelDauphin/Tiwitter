@@ -11,7 +11,7 @@
 
 <body>
 
-<div class="centered"><div class="wrapper"><h1>Tiwitter</h1></div></div>
+<div class="centered wrapper"><h1>Tiwitter</h1></div>
 
    <!--<img src="images/icon_log.svg" alt="image" title="icon_login" width="30%"/>-->
 
