@@ -21,7 +21,7 @@
         var objectList = <?php echo $params['objectList'] ?>;
     </script>
     <div class="group">
-        <textarea type="text" size="140" rows="4" cols="100" maxlength="140" name="tiwit" required></textarea>
+        <textarea type="text" size="140" rows="4" maxlength="140" name="tiwit" required></textarea>
         <span class="highlight"></span><span class="bar"></span>
         <label>Entrez un texte à tiwiter (140 caractères max)</label>
     </div>

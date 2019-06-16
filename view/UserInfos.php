@@ -8,7 +8,8 @@
 </head>
 
 <body>
-<h1>Tiwitter - Infos utilisateur</h1>
+<div class="centered wrapper"><h1>Tiwitter - Infos utilisateur</h1></div>
+
 
 
 <?php if(isset($params['error'])) {
@@ -43,26 +44,47 @@ if (isset($params['success']))
 
 <form action="/user/update" method="post">
     <!-- Username -->
-    <input type="text" id="input-1" value="<?php echo $user['username']; ?>" name="username" minlength="4" maxlength="40" placeholder="Entrez votre nom d'utilisateur" required />
-    <br>
+    <div class="group">
+        <input type="text" id="input-1" value="<?php echo $user['username']; ?>" name="username" minlength="4" maxlength="40" required />
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Entrez votre nom d'utilisateur</label>
+    </div>
     <!-- Nom -->
-    <input type="text" id="input-2" value="<?php echo $user['familyName']; ?>" name="familyName" minlength="3" maxlength="40" placeholder="Entrez votre nom" required/>
+    <div class="group">
+        <input type="text" id="input-2" value="<?php echo $user['familyName']; ?>" name="familyName" minlength="3" maxlength="40" required/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Entrez votre nom</label>
+    </div>
     <!-- Prénom -->
-    <input type="text" id="input-3" value="<?php echo $user['firstName']; ?>" name="firstName" minlength="3" maxlength="40" placeholder="Entrez votre prénom" required/>
+    <div class="group">
+        <input type="text" id="input-3" value="<?php echo $user['firstName']; ?>" name="firstName" minlength="3" maxlength="40" required/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Entrez votre prénom</label>
+    </div>
     <!-- Email -->
-    <input type="text" id="input-4" value="<?php echo $user['email']; ?>" name="email" minlength="4" maxlength="80" placeholder="Entrez votre email" required />
-    <br>
+    <div class="group">
+        <input type="text" id="input-4" value="<?php echo $user['email']; ?>" name="email" minlength="4" maxlength="80" required />
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Entrez votre email</label>
+    </div>
     <!-- Password -->
-    <input type="password" id="input-5" value="" name="password" minlength="6" maxlength="80" placeholder="Entrez votre nouveau mot de passe (si changement)"/>
+    <div class="group">
+        <input type="password" id="input-5" value="" name="password" minlength="6" maxlength="80"/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Entrez votre nouveau mot de passe (si changement)</label>
+    </div>
     <!-- Password Re -->
-    <input type="password" id="input-6" value="" name="passwordConfirm" minlength="6" maxlength="80" placeholder="Confirmez votre nouveau mot de passe (si changement)" />
-    <br><br>
+    <div class="group">
+        <input type="password" id="input-6" value="" name="passwordConfirm" minlength="6" maxlength="80"/>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Confirmez votre nouveau mot de passe (si changement)</label>
+    </div>
 
-    <button type="save">Enregistrer les modifications</button>
+    <button class="button">Enregistrer les modifications</button>
 </form>
 
 <form action="/home">
-    <button type="return">Retour</button>
+    <button class="button">Retour</button>
 </form>
 
 <!--<script src="js/classie.js"></script>

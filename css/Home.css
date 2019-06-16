@@ -96,6 +96,7 @@ textarea {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid #c6c6c6;
+    resize: none;
 }
 input:focus,
 textarea:focus {
@@ -162,9 +163,6 @@ label {
     to {
         background-position: 200% center;
     }
-}
-textarea{
-    resize: none;
 }
 h2{
     color:white;
