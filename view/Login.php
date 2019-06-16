@@ -10,8 +10,8 @@
 
 
 <body>
-      
-   	<h1> Tiwitter </h1>
+
+<div class="centered"><div class="wrapper"><h1>Tiwitter</h1></div></div>
 
    <!--<img src="images/icon_log.svg" alt="image" title="icon_login" width="30%"/>-->
 
@@ -33,7 +33,6 @@
         ";
     }
     ?>
-<br>
        <form action="/login", method="post">
            <div class="group">
                <input type="username" name="username" required>
