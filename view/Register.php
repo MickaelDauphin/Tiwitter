@@ -10,7 +10,7 @@
 
 <body>
 
-<h1> S'enregister </h1>
+<div class="centered wrapper"><h1>S'enregistrer</h1></div>
 
 <?php if(isset($params['!registered'])) {
     echo "
@@ -43,27 +43,47 @@ if (isset($params['userExist']))
     <form action="/tryRegister" method="post" autocomplete="off">
 
         <!-- Prénom -->
-        <input type="text" id="input-1" name="firstName" minlength="3" maxlength="40" placeholder="Entrez votre prénom" required />
-        <br>
+        <div class="group">
+            <input type="text" id="input-1" name="firstName" minlength="3" maxlength="40" required />
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Entrez vore prénom</label>
+        </div>
         <!-- Nom -->
-        <input type="text" id="input-2" name="familyName" minlength="3" maxlength="40" placeholder="Entrez votre nom" required/>
+        <div class="group">
+            <input type="text" id="input-2" name="familyName" minlength="3" maxlength="40" required/>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Entrez vore nom</label>
+        </div>
         <!-- Username -->
-        <input class="input__field input__field--kaede" type="text" id="input-3" name="username" minlength="4" maxlength="40" placeholder="Entrez votre nom d'utilisateur" required />
-        <br>
+        <div class="group">
+            <input class="input__field input__field--kaede" type="text" id="input-3" name="username" minlength="4" maxlength="40" required />
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Entrez vore nom d'utilisateur</label>
+        </div>
         <!-- Password -->
-        <input class="input__field input__field--kaede" type="password" id="input-4" name="password" minlength="6" maxlength="80" placeholder="Entrez un mot de passe" required/>
+        <div class="group">
+            <input class="input__field input__field--kaede" type="password" id="input-4" name="password" minlength="6" maxlength="80" required/>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Entrez un mot de passe</label>
+        </div>
         <!-- Password Re -->
-        <input class="input__field input__field--kaede" type="password" id="input-5" name="passwordConfirm" minlength="6" maxlength="80" placeholder="Confirmez le mot de passe" required />
-        <br>
+        <div class="group">
+            <input class="input__field input__field--kaede" type="password" id="input-5" name="passwordConfirm" minlength="6" maxlength="80" required />
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Confirmez le mot de passe</label>
+        </div>
         <!-- Email -->
-        <input class="input__field input__field--kaede" type="text" id="input-6" name="email" minlength="4" maxlength="80" placeholder="Entrez un email" required/>
-        <br>
+        <div class="group">
+            <input class="input__field input__field--kaede" type="text" id="input-6" name="email" minlength="4" maxlength="80" required/>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Entrez un email</label>
+        </div>
 
         <!-- Button -->
-        <button type="submit">Confirmer</button>
+        <button class="button">Confirmer</button>
     </form>
     <form action="/">
-        <button type="back">Retour</button>
+        <button class="button">Retour</button>
     </form>
 
 <footer>

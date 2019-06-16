@@ -1,45 +1,7 @@
 body {
     background-image :url(../images/background2.jpg);
 }
-h1
-{
-    text-align : center;
-    color: darkorange;
-    font-size: 225%;
-}
-
-/*input[type=username], input[type=password]{
-    text-align : center;
-    width: 30%;
-    margin-left : 35%;
-    padding: 12px 20px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius:12px;
-}
-input:focus
-{
-    background-color: darkorange;
-}*/
-
-/*button[type=login], button[type=register] {
-    color: red;
-    padding: 14px 20px;
-    margin: 8px 35%;
-    border: none;
-    cursor: pointer;
-    width: 30%;
-    border-radius:12px;
-}
-
-
-button:hover
-{
-    background-color: dodgerblue;
-}*/
 .centered {
-    margin:50px auto;
     text-align:center;
 }
 
