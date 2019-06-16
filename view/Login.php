@@ -34,7 +34,7 @@
         ";
     }
     ?>
-<br><br>
+<br>
        <form action="/login", method="post">
            <div class="group">
                <input type="username" name="username" required>
