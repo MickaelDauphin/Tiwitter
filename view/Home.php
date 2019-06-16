@@ -26,7 +26,7 @@
     </form></div>
     <div class="centeredButton">
     <form action="/home/tiwit">
-    <button class="button">Tiwiter</button>
+    <button class="buttonTiwiter">Tiwiter</button>
     </form>
     </div>
 
