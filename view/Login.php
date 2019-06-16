@@ -40,12 +40,14 @@
            <br>
            <input type="password" placeholder="Entrez votre mot de passe" name="password" required>
            <br>
-           <br>
-           <br>
-           <button type="login">Se connecter</button>
+           <div class="centered">
+               <button class="button">Se connecter</button>
+           </div>
        </form>
    <form action="/register">
-      <button type="register">S'enregistrer</button>
+       <div class="centered">
+           <button class="button">S'enregistrer</button>
+       </div>
     </form>
 
    <footer>
