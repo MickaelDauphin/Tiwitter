@@ -19,11 +19,12 @@ class TiwitController extends ControllerBase
         parent::__construct($app);
     }
     public function TiwitDBHandler(Request $request){
-        $message = $request->getParameters('message');
-        $this->app->getService('postFinder')->post($message);
-        $followings = $this->app->getService('postFinder')->getFollowings();
-        $posts = $this->app->getService('postFinder')->getPostsFromAccounts($followings);
-        return $this->render('timeline', ['posts'=>$posts]);
-    }
+        $tiwit = [
+            'contenu' => $request->getParameters('contenu'),
+            'utilisateurID' => $request->getParameters('utilisateurID'),
+        ];
+        var_dump($tiwit);
+        die;
+}
 
 }

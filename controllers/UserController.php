@@ -164,13 +164,6 @@ class UserController extends ControllerBase
         return $this->app->getService('render')('UserInfos', ['app' => $this->app, 'success' => true]);
     }
 
-    public function CameraHandler(Request $request)
-    {
-        if ($this->IsConnected())
-            return $this->app->getService('render')('Camera');
-        else
-            return $this->app->getService('redirect')('/');
-    }
 
     private function IsConnected() : bool
     {

@@ -17,7 +17,7 @@ class TiwitGateway
     private  $id;
 
 
-    private $utilisateur;
+    private $utilisateurID;
 
     private $contenu;
 
@@ -31,7 +31,7 @@ class TiwitGateway
     /**
      * @return mixed
      */
-    public function getUtilisateur()
+    public function getUtilisateurID()
     {
         return $this->utilisateur;
     }
@@ -39,7 +39,7 @@ class TiwitGateway
     /**
      * @param mixed $utilisateur
      */
-    public function setUtilisateur($utilisateur)
+    public function setUtilisateurID($utilisateur)
     {
         $this->utilisateur = $utilisateur;
     }
@@ -65,9 +65,9 @@ class TiwitGateway
         $this->conn = $app->getService('database')->getConnection();
     }
     public function insert():void{
-        $query = $this->conn->prepare('INSERT INTO tiwit ( utilisateur, contenu) VALUES ( :utilisateur,:contenu)');
+        $query = $this->conn->prepare('INSERT INTO tiwit ( utilisateurID, contenu) VALUES ( :utilisateur,:contenu)');
         $executed = $query->execute([
-            ':utilisateur' => $this->utilisateur,
+            ':utilisateurID' => $this->utilisateurID,
             ':contenu' => $this->contenu,
 
         ]);
@@ -79,9 +79,9 @@ class TiwitGateway
     {
         if (!$this->id) throw  new \Error('Instance does not exist in base');
 
-        $query = $this->conn->prepare('UPDATE tiwit SET utilisateur = :utilisateur, contenu = :contenu WHERE id = :id');
+        $query = $this->conn->prepare('UPDATE tiwit SET utilisateurID = :utilisateurID, contenu = :contenu WHERE id = :id');
         $exected = $query->execute([
-            ':utilisateur' => $this->utilisateur,
+            ':utilisateurID' => $this->utilisateurID,
             ':contenu' => $this->contenu,
         ]);
         if (!$exected) throw  new \Error('Update failed');
@@ -89,7 +89,7 @@ class TiwitGateway
 
     public function hydrate(array $elements){
         $this->id = $elements['id'];
-        $this->utilisateur = $elements['utilisateur'];
+        $this->utilisateurID = $elements['utilisateurID'];
         $this->contenu = $elements['contenu'];
     }
 

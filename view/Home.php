@@ -16,16 +16,18 @@
     <script type="text/javascript">
         var objectList = <?php echo $params['objectList'] ?>;
     </script>
+    <form action="/home/tiwit" method="post">
     <div class="centeredTexteArea">
-    <form>
-    <div class="group">
-        <textarea type="text" rows="6" maxlength="140" name="tiwit" required></textarea>
-        <span class="highlight"></span><span class="bar"></span>
-        <label>Entrez un texte à tiwiter (140 caractères max)</label>
-    </div>
-    </form></div>
-    <div class="centeredButton">
-    <form action="/home/tiwit">
+        <!--<form>->
+        <div class="group"-->
+            <input type="text" rows="6" maxlength="140" name="tiwit" required/>
+            <span class="highlight"></span><span class="bar"></span>
+            <label>Entrez un texte à tiwiter (140 caractères max)</label>
+        </div>
+            <!--</form>-->
+         </div>
+         <div class="centeredButton">
+         <!--<form action="/home/tiwit" method="post">-->
     <button class="buttonTiwiter">Tiwiter</button>
     </form>
     </div>
