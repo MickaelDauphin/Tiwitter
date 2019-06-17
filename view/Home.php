@@ -40,6 +40,11 @@
     <button class="buttonTiwiter">Tiwiter</button>
     </form>
     </div>
+    <div class="centeredButton">
+        <form action="/home/affiche">
+            <button class="button">Voir les tiwits</button>
+        </form>
+    </div>
 
 </body>
 <footer>

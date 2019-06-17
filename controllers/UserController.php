@@ -60,6 +60,7 @@ class UserController extends ControllerBase
             if ($id != null)
             {
                 $this->app->getService('objectFinder')->ChangeState($this->app->getService('objectFinder')->findOneById($id));
+                $this->app->TiwitHandler();
                 $this->app->getService('redirect')('/home');
             }
             return $this->app->getService('render')('Home', [ 'app' => $this->app, 'objectList' => $this->app->getService('objectFinder')->findAllToJson()]);

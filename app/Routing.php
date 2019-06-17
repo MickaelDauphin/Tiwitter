@@ -43,5 +43,7 @@ class Routing
         $this->app->post('/user/update', [$user, 'UserDBUpdate']);
 
         $this->app->post('/home/tiwit',[$tiwit, 'TiwitDBHandler']);
+
+        $this->app->get('/home/affiche',[$tiwit, 'TiwitHandler']);
         }
     }

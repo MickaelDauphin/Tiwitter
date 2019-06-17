@@ -3,10 +3,6 @@
 //namespace Model\Gateway;
 //
 //use App\Src\App;
-//
-//class ObjectGateway
-//{
-//    /**
 //     * @var \PDO
 //     */
 //    private $conn;
