@@ -235,3 +235,8 @@ h2{
 .blanc{
     color : white;
 }
+
+p.tiwits {
+    border-style: outset;
+    border-color : #febf53;
+}

@@ -31,6 +31,7 @@ if(isset($params['tiwitPosted'])) {
     foreach ($params['tiwits'] as $tiwit) :?>
         <tr>
             <div class="centered">
+                <p class="tiwits">
             Tiwit de <?= $tiwit->getUtilisateur(); ?></a>
             <?php echo ":"?>
             <br>
@@ -40,6 +41,7 @@ if(isset($params['tiwitPosted'])) {
             <?php echo "&nbsp;&nbsp;"?> <a href="" style="color:#febf53">Follow</a>
             <br><br>
             </div>
+            </p>
         </tr>
 
     <?php endforeach; ?>
