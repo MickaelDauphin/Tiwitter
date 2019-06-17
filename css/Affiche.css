@@ -239,4 +239,7 @@ h2{
 p.tiwits {
     border-style: outset;
     border-color : #febf53;
+    padding: 10px 10px 10px 5px;
+    width: 600px;
+    text-align : center;
 }
