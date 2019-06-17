@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 17 juin 2019 à 15:05
+-- Généré le :  lun. 17 juin 2019 à 14:34
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -44,12 +44,7 @@ INSERT INTO `tiwit` (`id`, `utilisateur`, `contenu`) VALUES
 (3, '7', 'coucou toi'),
 (4, '7', 'coucou toi'),
 (5, '7', 'blavla'),
-(6, '7', 'fdfdfe'),
-(7, '7', 'hihiho'),
-(8, '7', 'zfzfe'),
-(9, '7', 'agamagohenmapoke'),
-(10, '7', 'dsdsdd'),
-(11, 'rems', 'dfdg');
+(6, '7', 'fdfdfe');
 
 -- --------------------------------------------------------
 
@@ -98,7 +93,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `tiwit`
 --
 ALTER TABLE `tiwit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `user`
