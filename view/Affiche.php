@@ -30,11 +30,16 @@ if(isset($params['tiwitPosted'])) {
 
     foreach ($params['tiwits'] as $tiwit) :?>
         <tr>
-            <td>Tiwit de <?= $tiwit->getUtilisateur(); ?></a></td>
-            <td><?php echo ":&nbsp;"?></td>
-            <td><?= $tiwit->getContenu(); ?></td>
-            <td><?php echo "&nbsp;&nbsp;"?> <a href="" style="color:#fe5353">Like</a></td>
-            <td><?php echo "&nbsp;&nbsp;"?> <a href="" style="color:#febf53">Follow</a></td>
+            <div class="centered">
+            Tiwit de <?= $tiwit->getUtilisateur(); ?></a>
+            <?php echo ":"?>
+            <br>
+            <?= $tiwit->getContenu(); ?>
+            <br>
+            <?php echo "&nbsp;&nbsp;"?> <a href="" style="color:#fe5353">Like</a>
+            <?php echo "&nbsp;&nbsp;"?> <a href="" style="color:#febf53">Follow</a>
+            <br><br>
+            </div>
         </tr>
 
     <?php endforeach; ?>
