@@ -240,6 +240,7 @@ p.tiwits {
     border-style: outset;
     border-color : #febf53;
     padding: 10px 10px 10px 5px;
-    width: 600px;
+    width: 50%;
     text-align : center;
+    margin-left : 25%;
 }
