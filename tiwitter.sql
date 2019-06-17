@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 14 juin 2019 à 17:12
+-- Généré le :  lun. 17 juin 2019 à 14:34
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -30,9 +30,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tiwit` (
   `id` int(11) NOT NULL,
-  `utilisateur` varchar(20) NOT NULL,
+  `utilisateurID` varchar(20) NOT NULL,
   `contenu` varchar(140) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `tiwit`
+--
+
+INSERT INTO `tiwit` (`id`, `utilisateurID`, `contenu`) VALUES
+(1, '7', 'bla'),
+(2, '7', 'efefefe'),
+(3, '7', 'coucou toi'),
+(4, '7', 'coucou toi'),
+(5, '7', 'blavla'),
+(6, '7', 'fdfdfe');
 
 -- --------------------------------------------------------
 
@@ -54,9 +66,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `firstName`, `familyName`, `email`) VALUES
-(1, 'lerems', 'test', 'remy', 'crespe', 'le@rems'),
-(4, 'default', 'default', 'default', 'default', 'default@default'),
-(6, 'mickael', 'e10adc3949ba59abbe56e057f20f883e', 'dauphin', 'dauphin', 'mickael@etu');
+(6, 'micka', 'e10adc3949ba59abbe56e057f20f883e', 'dauphin', 'dauphin', 'mickael@etu'),
+(7, 'rems', 'e10adc3949ba59abbe56e057f20f883e', 'remy', 'crespe', 're@cr');
 
 --
 -- Index pour les tables déchargées
@@ -82,13 +93,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `tiwit`
 --
 ALTER TABLE `tiwit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
