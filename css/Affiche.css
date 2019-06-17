@@ -264,3 +264,10 @@ p.tiwits {
     cursor: pointer;
     border-radius: 6px;
 }
+.LikeButton:hover{
+    background-color: #ff9d9d;
+}
+
+.FollowButton:hover{
+    background: #fbba8a;
+}
