@@ -31,10 +31,10 @@ if(isset($params['tiwitPosted'])) {
     foreach ($params['tiwits'] as $tiwit) :?>
         <tr>
                 <p class="tiwits">
-            Tiwit de <?= $tiwit->getUtilisateur(); ?></a>
+            Tiwit de <p2 class="pseudo"><?= $tiwit->getUtilisateur(); ?></a></p2>
             <?php echo ":"?>
             <br>
-            <?= $tiwit->getContenu(); ?>
+                <?= $tiwit->getContenu(); ?>
             <br>
             <?php echo "&nbsp;&nbsp;"?> <button class="LikeButton" href="" ">Like</button>
             <?php echo "&nbsp;&nbsp;"?> <button class="FollowButton" href="" ">Follow</button>
