@@ -4,7 +4,7 @@
     <title>Tiwitter</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" href="../css/Home.css" />
+    <link rel="stylesheet" href="../css/Affiche.css" />
 
 </head>
 
@@ -24,6 +24,7 @@ if(isset($params['tiwitPosted'])) {
 <script type="text/javascript">
     var objectList = <?php echo $params['objectList'] ?>;
 </script>
+<div class="blanc">
 <table>
     <?php
 
@@ -31,12 +32,14 @@ if(isset($params['tiwitPosted'])) {
         <tr>
             <td>Tiwit de : <?= $tiwit->getUtilisateur(); ?></a></td>
             <td>Contenu : <?= $tiwit->getContenu(); ?></td>
-
+            <td><?php ?> <a href="">Like</a></td>
+            <td><?php ?> <a href="">Follow</a></td>
         </tr>
 
     <?php endforeach; ?>
 
 </table>
+</div>
 <div class="centeredButton">
     <form action="/home">
         <button class="button">Retour </button>
