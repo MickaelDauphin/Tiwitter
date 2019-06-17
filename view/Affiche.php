@@ -37,7 +37,7 @@ if(isset($params['tiwitPosted'])) {
                 <?= $tiwit->getContenu(); ?>
             <br>
             <?php echo "&nbsp;&nbsp;"?> <button class="LikeButton" href="" ">Like</button>
-            <?php echo "&nbsp;&nbsp;"?> <button class="FollowButton" href="" ">Follow</button>
+            <?php echo "&nbsp;&nbsp;"?> <form action="/home/userfollowed"><button class="FollowButton" href="" ">Follow <?= $tiwit->getUtilisateur(); ?></button></form>
             <br><br>
                 </p>
 
