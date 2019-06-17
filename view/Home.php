@@ -11,7 +11,7 @@
 <body>
     <div class="centered wrapper"><h1>Tiwitter</h1></div>
 
-    <div class="centered"><h2>Identité : <a id="Name" href="/user"><?php  echo  $params['app']->getSessionParameters('user')['username']; ?></a></h2></div>
+    <div class="centered"><h2>Identité : <a id="Name" href="/user" style="color:#fe5353"><?php  echo  $params['app']->getSessionParameters('user')['username']; ?></a></h2></div>
     <?php
 
     if(isset($params['tiwitPosted'])) {
