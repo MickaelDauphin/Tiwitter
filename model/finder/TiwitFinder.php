@@ -22,7 +22,7 @@ class TiwitFinder implements FinderInterface
     public function findOneById($id){}
 
     public function getPost($id){
-        $query = $this->conn->prepare('SELECT id, contenu, utilisateurID FROM post WHERE contenu like :id'); // Création de la requête + utilisation order by pour ne pas utiliser sort
+        $query = $this->conn->prepare('SELECT id, contenu, utilisateur FROM post WHERE contenu like :id'); // Création de la requête + utilisation order by pour ne pas utiliser sort
         $query->execute([':id' => $id]); // Exécution de la requête
         $element = $query->fetchAll(\PDO::FETCH_ASSOC);
 
@@ -34,20 +34,14 @@ class TiwitFinder implements FinderInterface
         return $post;
     }
 
-    public function post($contenu)
-    {
-        $post = new PostGateway($this->app);
-        $post->setcontenu($contenu);
-        $post->setutilisateurID($_SESSION['id']);
-        $post->insert();
-    }
+
     public function CreateTiwit(Array $tiwits) : Bool
     {
         try
         {
             $tiwit = new TiwitGateway($this->app);
             $tiwit->setContenu($tiwits['contenu']);
-            $tiwit->setUtilisateurID($tiwits['utilisateurID']);
+            $tiwit->setUtilisateur($tiwits['utilisateur']);
 
 
             $tiwit->insert();

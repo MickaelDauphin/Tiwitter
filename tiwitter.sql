@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tiwit` (
   `id` int(11) NOT NULL,
-  `utilisateurID` varchar(20) NOT NULL,
+  `utilisateur` varchar(20) NOT NULL,
   `contenu` varchar(140) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -38,7 +38,7 @@ CREATE TABLE `tiwit` (
 -- Déchargement des données de la table `tiwit`
 --
 
-INSERT INTO `tiwit` (`id`, `utilisateurID`, `contenu`) VALUES
+INSERT INTO `tiwit` (`id`, `utilisateur`, `contenu`) VALUES
 (1, '7', 'bla'),
 (2, '7', 'efefefe'),
 (3, '7', 'coucou toi'),

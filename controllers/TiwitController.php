@@ -24,18 +24,21 @@ class TiwitController extends ControllerBase
     public function TiwitDBHandler(Request $request){
         $tiwits = [
             'contenu' => $request->getParameters('tiwit'),
-            'utilisateurID' => $_SESSION['user']['id'],
+            'utilisateur' => $_SESSION['user']['username'],
 
         ];
+
         $result = $this->app->getService('tiwitFinder')->createTiwit($tiwits);
 
         if (!$result)
-            /*return $this->app->getService('render')('Home', ['registered' => false);*/
+        {
             $this->app->getService('redirect')('/home');
+        }
        else
            $this->app->getService('redirect')('/home');
-            /*return $this->app->getService('render')('Home'/*, ['registered' => true]);*/
 
-}
-
+    }
+    private function TiwitPosted(){
+        return $this->app->getService('render')('Home', ['tiwitPosted' => true]);
+    }
 }

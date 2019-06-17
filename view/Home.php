@@ -12,7 +12,16 @@
     <div class="centered wrapper"><h1>Tiwitter</h1></div>
 
     <div class="centered"><h2>Identité : <a id="Name" href="/user"><?php  echo  $params['app']->getSessionParameters('user')['username']; ?></a></h2></div>
+    <?php
 
+    if(isset($params['tiwitPosted'])) {
+        echo "
+           <p style='color: green' align='center'>
+           Tiwit posté !
+           </p>
+        ";
+    }
+?>
     <script type="text/javascript">
         var objectList = <?php echo $params['objectList'] ?>;
     </script>
