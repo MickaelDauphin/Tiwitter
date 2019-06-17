@@ -42,7 +42,7 @@ if(isset($params['tiwitPosted'])) {
 </div>
 <div class="centeredButton">
     <form action="/home">
-        <button class="button">Retour </button>
+        <button class="buttonTiwiter">Retour </button>
     </form>
 </div>
 </body>
