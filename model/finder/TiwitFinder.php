@@ -8,9 +8,8 @@
 
 namespace Model\Finder;
 
-use model\gateway\PostGateway;
-use model\gateway\UserGateway;
-use model\finder\FinderInterface;
+
+use Model\Gateway\TiwitGateway;
 use app\src\App;
 
 class TiwitFinder implements FinderInterface
@@ -41,5 +40,23 @@ class TiwitFinder implements FinderInterface
         $post->setcontenu($contenu);
         $post->setutilisateurID($_SESSION['id']);
         $post->insert();
+    }
+    public function CreateTiwit(Array $tiwits) : Bool
+    {
+        try
+        {
+            $tiwit = new TiwitGateway($this->app);
+            $tiwit->setContenu($tiwits['contenu']);
+            $tiwit->setUtilisateurID($tiwits['utilisateurID']);
+
+
+            $tiwit->insert();
+
+            return true;
+        }
+        catch (\Error $e)
+        {
+            return false;
+        }
     }
 }

@@ -8,9 +8,11 @@
 
 namespace Controllers;
 
-use controllers\ControllerBase;
+
 use app\src\App;
 use app\src\request\Request;
+use Model\Finder\TiwitFinder;
+use Model\Gateway\TiwitGateway;
 
 class TiwitController extends ControllerBase
 {
@@ -20,12 +22,19 @@ class TiwitController extends ControllerBase
         parent::__construct($app);
     }
     public function TiwitDBHandler(Request $request){
-        $tiwit = [
+        $tiwits = [
             'contenu' => $request->getParameters('tiwit'),
             'utilisateurID' => $_SESSION['user']['id'],
 
         ];
+        $result = $this->app->getService('tiwitFinder')->createTiwit($tiwits);
 
+        if (!$result)
+            /*return $this->app->getService('render')('Home', ['registered' => false);*/
+            $this->app->getService('redirect')('/home');
+       else
+           $this->app->getService('redirect')('/home');
+            /*return $this->app->getService('render')('Home'/*, ['registered' => true]);*/
 
 }
 

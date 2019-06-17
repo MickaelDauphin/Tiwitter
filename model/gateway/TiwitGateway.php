@@ -33,15 +33,15 @@ class TiwitGateway
      */
     public function getUtilisateurID()
     {
-        return $this->utilisateur;
+        return $this->utilisateurID;
     }
 
     /**
      * @param mixed $utilisateur
      */
-    public function setUtilisateurID($utilisateur)
+    public function setUtilisateurID($utilisateurID)
     {
-        $this->utilisateur = $utilisateur;
+        $this->utilisateurID = $utilisateurID;
     }
 
     /**
@@ -65,7 +65,7 @@ class TiwitGateway
         $this->conn = $app->getService('database')->getConnection();
     }
     public function insert():void{
-        $query = $this->conn->prepare('INSERT INTO tiwit ( utilisateurID, contenu) VALUES ( :utilisateur,:contenu)');
+        $query = $this->conn->prepare('INSERT INTO tiwitter.tiwit ( utilisateurID, contenu) VALUES ( :utilisateurID,:contenu)');
         $executed = $query->execute([
             ':utilisateurID' => $this->utilisateurID,
             ':contenu' => $this->contenu,
@@ -79,7 +79,7 @@ class TiwitGateway
     {
         if (!$this->id) throw  new \Error('Instance does not exist in base');
 
-        $query = $this->conn->prepare('UPDATE tiwit SET utilisateurID = :utilisateurID, contenu = :contenu WHERE id = :id');
+        $query = $this->conn->prepare('UPDATE tiwitter.tiwit SET utilisateurID = :utilisateurID, contenu = :contenu WHERE id = :id');
         $exected = $query->execute([
             ':utilisateurID' => $this->utilisateurID,
             ':contenu' => $this->contenu,
