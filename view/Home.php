@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<head>
+<head xmlns="http://www.w3.org/1999/html">
    <title>Tiwitter</title>
    <meta charset="utf-8" />
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -29,26 +29,27 @@
     <div class="centeredTexteArea">
 
         <div class="group">
-            <input type="text" rows="6" maxlength="140" name="tiwit" required/>
+            <textarea type="text" rows="6" maxlength="140" name="tiwit" required/></textarea>
             <span class="highlight"></span><span class="bar"></span>
             <label>Entrez un texte à tiwiter (140 caractères max)</label>
         </div>
 
          </div>
-         <div class="centeredButton">
+         <div class="centeredButton formes">
          <!--<form action="/home/tiwit" method="post">-->
+
     <button class="buttonTiwiter">Tiwiter</button>
     </form>
     </div>
-    <div class="centeredButton">
+    <div class="centeredButton formes">
         <form action="/home/affiche">
-            <button class="button">Voir les tiwits</button>
+            <button class="buttonTiwiter">Voir les tiwits</button>
         </form>
     </div>
 
 </body>
 <footer>
-    <div class="centeredButton">
+    <div class="centeredButton formes">
     <form action="/">
         <button class="button">Se déconnecter</button>
     </form>

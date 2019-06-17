@@ -131,11 +131,11 @@ body {
     position: relative;
     margin: 45px 0;
 }
-form {
+.formes {
     width: 320px;
     margin : 45px;
 }
-form h1 {
+.formes h1 {
     font-size: 3em;
     font-weight: 300;
     text-align: center;
