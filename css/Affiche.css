@@ -244,3 +244,23 @@ p.tiwits {
     text-align : center;
     margin-left : 25%;
 }
+.LikeButton{
+     background-color: #fe5353;
+     border: none;
+     color: white;
+     padding: 6px 16px;
+     margin-top: 10px;
+     text-align: center;
+     cursor: pointer;
+     border-radius: 6px;
+ }
+.FollowButton{
+    background-color: #FF6D00;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+}

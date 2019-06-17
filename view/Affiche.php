@@ -36,8 +36,8 @@ if(isset($params['tiwitPosted'])) {
             <br>
             <?= $tiwit->getContenu(); ?>
             <br>
-            <?php echo "&nbsp;&nbsp;"?> <a href="" style="color:#fe5353">Like</a>
-            <?php echo "&nbsp;&nbsp;"?> <a href="" style="color:#febf53">Follow</a>
+            <?php echo "&nbsp;&nbsp;"?> <button class="LikeButton" href="" ">Like</button>
+            <?php echo "&nbsp;&nbsp;"?> <button class="FollowButton" href="" ">Follow</button>
             <br><br>
                 </p>
 
