@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 18 juin 2019 à 20:52
+-- Généré le :  mar. 18 juin 2019 à 22:25
 -- Version du serveur :  10.1.38-MariaDB
 -- Version de PHP :  7.3.2
 
@@ -62,7 +62,9 @@ INSERT INTO `tiwit` (`id`, `utilisateur`, `contenu`) VALUES
 (9, '7', 'agamagohenmapoke'),
 (10, '7', 'dsdsdd'),
 (11, 'rems', 'dfdg'),
-(12, 'rems', 'eh toi la bas\r\n');
+(12, 'rems', 'eh toi la bas\r\n'),
+(13, 'rems43', 'COUCOU TOUT LE MONDE'),
+(14, 'rems43', 'COUCOU TOI');
 
 -- --------------------------------------------------------
 
@@ -85,7 +87,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `firstName`, `familyName`, `email`) VALUES
 (6, 'micka', 'e10adc3949ba59abbe56e057f20f883e', 'dauphin', 'dauphin', 'mickael@etu'),
-(7, 'rems', 'e10adc3949ba59abbe56e057f20f883e', 'remy', 'crespe', 're@cr');
+(7, 'rems43', 'e10adc3949ba59abbe56e057f20f883e', 'crespe', 'crespe', 're@cr');
 
 -- --------------------------------------------------------
 
@@ -95,8 +97,8 @@ INSERT INTO `user` (`id`, `username`, `password`, `firstName`, `familyName`, `em
 
 CREATE TABLE `userfolow` (
   `id` int(11) NOT NULL,
-  `user` varchar(50) NOT NULL,
-  `userFollowed` varchar(50) NOT NULL
+  `userID` int(11) NOT NULL,
+  `userFollowedID` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -141,7 +143,7 @@ ALTER TABLE `retiwit`
 -- AUTO_INCREMENT pour la table `tiwit`
 --
 ALTER TABLE `tiwit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `user`
