@@ -25,6 +25,25 @@
     <script type="text/javascript">
         var objectList = <?php echo $params['objectList'] ?>;
     </script>
+    <div class="blanc">
+    <?php
+
+    foreach ($params['user'] as $user) :?>
+        <tr>
+            <p class="tiwits">
+               Utilisateur<p2 class="pseudo"><?=$user->getUsername(); ?></a></p2>
+                <?php echo ":"?>
+                <br>
+                <br>
+                <?php echo "&nbsp;&nbsp;"?> <button class="LikeButton" href="" ">Like</button>
+                <?php echo "&nbsp;&nbsp;"?> <form action="/home/userfollowed"><button class="FollowButton" href="" ">Follow <?= $tiwit->getUtilisateur(); ?></button></form>
+            <br><br>
+            </p>
+
+        </tr>
+
+    <?php endforeach; ?>
+    </div>
     <form action="/home/tiwit" method="post">
     <div class="centeredTexteArea">
 

@@ -29,19 +29,19 @@ if(isset($params['tiwitPosted'])) {
     <?php
 
     foreach ($params['tiwits'] as $tiwit) :?>
-        <tr>
-                <p class="tiwits">
+    <tr>
+        <p class="tiwits">
             Tiwit de <p2 class="pseudo"><?= $tiwit->getUtilisateur(); ?></a></p2>
             <?php echo ":"?>
             <br>
-                <?= $tiwit->getContenu(); ?>
+            <?= $tiwit->getContenu(); ?>
             <br>
             <?php echo "&nbsp;&nbsp;"?> <button class="LikeButton" href="" ">Like</button>
             <?php echo "&nbsp;&nbsp;"?> <form action="/home/userfollowed"><button class="FollowButton" href="" ">Follow <?= $tiwit->getUtilisateur(); ?></button></form>
-            <br><br>
-                </p>
+        <br><br>
+        </p>
 
-        </tr>
+    </tr>
 
     <?php endforeach; ?>
 
