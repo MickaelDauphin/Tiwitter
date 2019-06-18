@@ -28,10 +28,17 @@ class UserFinder implements FinderInterface
     {
         $query = $this->conn->prepare('SELECT DISTINCT id, username, password, firstName, familyName, email FROM tiwitter.user ORDER BY id');
         $query->execute();
-        $users = $query->fetchAll(\PDO::FETCH_ASSOC);
+        $elements = $query->fetchAll(\PDO::FETCH_ASSOC);
 
-        if (count($users) === 0)
-            return null;
+        if(count($elements)=== 0)return null;
+
+        $users = [];
+        $user = null;
+        foreach ($elements as $elements){
+            $user = new UserGateway($this->app);
+            $user->hydrate($elements);
+            $users[] = $user;
+        }
 
         return $users;
     }

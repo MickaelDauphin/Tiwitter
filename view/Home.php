@@ -28,13 +28,12 @@
     foreach ($params['user'] as $user) :?>
         <tr>
             <p class="tiwits">
-               Utilisateur<p2 class="pseudo"><?=
-                    $user->getId(); ?></a></p2>
+               Utilisateur<p2 class="pseudo"></a></p2>
                 <?php echo ":"?>
+                <?= $user->getUsername(); ?>
                 <br>
                 <br>
-                <?php echo "&nbsp;&nbsp;"?> <button class="LikeButton" href="" ">Like</button>
-                <?php echo "&nbsp;&nbsp;"?> <form action="/home/userfollowed"><button class="FollowButton" href="" ">Follow <?= $tiwit->getUtilisateur(); ?></button></form>
+                <?php echo "&nbsp;&nbsp;"?> <form action="/home/userfollowed"><button class="FollowButton" href="" ">Follow </button></form>
             <br><br>
             </p>
 
