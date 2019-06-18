@@ -34,9 +34,11 @@ if(isset($params['tiwitPosted'])) {
             <br>
             <?= $tiwit->getContenu(); ?>
             <br>
-            <?php echo "&nbsp;&nbsp;"?> <button class="LikeButton" href="" ">Like</button>
-            <?php echo "&nbsp;&nbsp;"?> <form action="/home/userfollowed"><button class="FollowButton" href="" >Retiwit</button></form>
-        <br><br>
+            <form>
+            <button class="LikeButton" href="" ">Like</button>
+            <form action="/home/userfollowed"><button class="FollowButton" href="" >Retiwit</button></form>
+        </form>
+            <br><br>
         </p>
 
     </tr>
@@ -45,16 +47,18 @@ if(isset($params['tiwitPosted'])) {
 
 </table>
 </div>
+
+</body>
 <div class="centeredButton">
     <form action="/home">
-        <button class="buttonTiwiter">Retour </button>
+        <button class="buttonReturn">Retour </button>
     </form>
 </div>
-</body>
 <footer>
+    <br><br><br>
     <div class="centeredButton">
         <form action="/">
-            <button class="button">Se déconnecter</button>
+            <button class="buttonDisconnect">Se déconnecter</button>
         </form>
     </div>
 </footer>
