@@ -26,7 +26,7 @@ class UserFinder implements FinderInterface
 
     public function findAll()
     {
-        $query = $this->conn->prepare('SELECT DISTINCT id, username, password, firstName, familyName, email FROM tiwitter.user ORDER BY id');
+        $query = $this->conn->prepare('SELECT DISTINCT id, username, password, firstName, familyName, email FROM tiwitter.user ORDER BY  id  ');
         $query->execute();
         $elements = $query->fetchAll(\PDO::FETCH_ASSOC);
 

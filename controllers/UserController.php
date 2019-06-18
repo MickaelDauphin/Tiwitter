@@ -179,20 +179,16 @@ class UserController extends ControllerBase
         $this->app->setSessionParameters('user', $this->app->getService('userFinder')->findOneById($id)->toArray());
     }
 
-    public function followUserDBHandler(Request $request)
+    public function FollowUserDBHandler(Request $request, $id)
     {
-        try
-        {
-            $userId = $request->getParameters('userId');
-            $this->app->getService('userFinder')->follow($userId);
-
-            return $this->app->getService('redirect')('/home');
-
-        }
-        catch (\Error $e)
-        {
-            return $this->app->getService('render')('404', ['reason' => "Erreur", 'details' => "Vous ne pouvez pas vous suivre vous même"]);
-        }
+        $userInfos = [
+            'firstName' => $request->getParameters('firstName'),
+            'familyName' => $request->getParameters('familyName'),
+            'username' => $request->getParameters('username'),
+            'password' => md5($request->getParameters('password')),
+            'passwordConfirm' => md5($request->getParameters('passwordConfirm')),
+            'email' => $request->getParameters('email')
+        ];
     }
 
 }
