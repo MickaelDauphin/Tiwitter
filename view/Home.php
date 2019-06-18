@@ -23,24 +23,9 @@
     }
 ?>
 
-    <div class="blanc">
-    <?php
-    foreach ($params['user'] as $user) :?>
-        <tr>
-            <p class="tiwits">
-               Utilisateur<p2 class="pseudo"></a></p2>
-                <?php echo ":"?>
-                <?= $user->getUsername(); ?>
-                <br>
-                <br>
-                <?php echo "&nbsp;&nbsp;"?> <form action="/home/userfollowed"><button class="FollowButton" href="" ">Follow </button></form>
-            <br><br>
-            </p>
 
-        </tr>
 
-    <?php endforeach; ?>
-    </div>
+
     <form action="/home/tiwit" method="post">
     <div class="centeredTexteArea">
 
@@ -51,18 +36,41 @@
         </div>
 
          </div>
-         <div class="centeredButton formes">
-         <!--<form action="/home/tiwit" method="post">-->
 
-    <button class="buttonTiwiter">Tiwiter</button>
+
+        <div class="centeredButton formes">
+            <button class="buttonTiwiter">Tiwiter</button>
+        </div>
     </form>
-    </div>
     <div class="centeredButton formes">
         <form action="/home/affiche">
             <button class="buttonTiwiter">Voir les tiwits</button>
         </form>
     </div>
 
+    <br><br><br><br>
+    <hr>
+    <div class="titreListe">Liste des utilisateurs :</div>
+    <br><br><br>
+    <div class="blanc">
+    <table>
+
+        <?php
+        foreach ($params['user'] as $user) :?>
+            <tr>
+                <p class="users">
+                    Utilisateur<p2 class="pseudo"></a></p2>
+                    <?php echo ":"?>
+                    <?= $user->getUsername(); ?>
+                    <br>
+                    <br>
+                    <?php echo "&nbsp;&nbsp;"?> <form action="/home/userfollowed"><button class="FollowButton" href="" ">Follow </button></form>
+                </p>
+
+            </tr>
+        <?php endforeach; ?>
+    </table>
+    </div>
 </body>
 <footer>
     <div class="centeredButton formes">
