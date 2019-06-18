@@ -47,8 +47,6 @@
             <button class="buttonTiwiter">Voir les tiwits</button>
         </form>
     </div>
-
-    <br><br><br><br>
     <hr>
     <div class="titreListe">Liste des utilisateurs :</div>
     <br><br><br>
