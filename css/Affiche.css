@@ -254,7 +254,7 @@ p.tiwits {
      cursor: pointer;
      border-radius: 6px;
  }
-.FollowButton{
+.RetiwitButton{
     background-color: #FF6D00;
     border: none;
     color: white;
@@ -269,7 +269,7 @@ p.tiwits {
     background-color: #ff9d9d;
 }
 
-.FollowButton:hover{
+.RetiwitButton:hover{
     background: #fbba8a;
 }
 
