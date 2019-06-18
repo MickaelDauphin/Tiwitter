@@ -112,23 +112,11 @@ class UserFinder implements FinderInterface
         $currentUserId = $this->app->getSessionParameters('user')['id'];
 
         if ($currentUserId === $userToFollowId) // L'utiliateur ne peut pas se suivre lui même
-            throw new \Error("User can't follow himself", 1);
+            throw new \Error("User can't follow himself");
 
         $user = $this->app->getService('userFinder')->findOneById($currentUserId);
-
         $followedUser = $user->getFollowedUser();
-        if (!is_null($followedUser))
-            $isAlreadyFollowed = array_search($userToFollowId, $followedUser);
-        else
-            $isAlreadyFollowed = false;
-
-
-        if ($isAlreadyFollowed === false)
-            $user->follow($userToFollowId);
-        else
-            $user->unfollow($userToFollowId);
-
-
-        $this->app->setSessionParameters('user', $user->toArray());
+        var_dump($followedUser);
+        die;
     }
 }

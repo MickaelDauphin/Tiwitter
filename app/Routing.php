@@ -46,6 +46,6 @@ class Routing
 
         $this->app->get('/home/affiche',[$tiwit, 'TiwitHandler']);
 
-        $this->app->post('/home/userfollowed/(\d+)', [$user, 'HomeHandler']);
+        $this->app->get('/home/userfollowed/(\d+)', [$user, 'FollowUserDBHandler']);
         }
     }

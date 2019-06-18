@@ -181,14 +181,8 @@ class UserController extends ControllerBase
 
     public function FollowUserDBHandler(Request $request, $id)
     {
-        $userInfos = [
-            'firstName' => $request->getParameters('firstName'),
-            'familyName' => $request->getParameters('familyName'),
-            'username' => $request->getParameters('username'),
-            'password' => md5($request->getParameters('password')),
-            'passwordConfirm' => md5($request->getParameters('passwordConfirm')),
-            'email' => $request->getParameters('email')
-        ];
+
+        $result = $this->app->getService('userFinder')->follow($id);
     }
 
 }
