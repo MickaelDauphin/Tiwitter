@@ -50,7 +50,6 @@
     <hr>
     <div class="titreListe">Liste des utilisateurs :</div>
     <br><br><br>
-    <div class="blanc">
     <table>
 
         <?php
@@ -68,12 +67,11 @@
             </tr>
         <?php endforeach; ?>
     </table>
-    </div>
 </body>
 <footer>
     <div class="centeredButton formes">
     <form action="/">
-        <button class="button">Se déconnecter</button>
+        <button class="buttonDisconnect">Se déconnecter</button>
     </form>
     </div>
 </footer>

@@ -5,7 +5,7 @@ body {
     text-align:center;
 }
 
-.button{
+.buttonDisconnect{
     padding: 14px;
 
     width : 100%;
@@ -231,22 +231,6 @@ h2{
 .centeredButton{
     margin-left : 42%;
 }
-.blanc{
-    color : white;
-}
-p.users {
-    border-style: outset;
-    border-color : #febf53;
-    padding: 10px 10px 10px 5px;
-    width: 50%;
-    text-align : center;
-    margin-left : 25%;
-}
-.titreListe{
-    color : white;
-    font-size : 30px;
-    text-align : center;
-}
 hr {
     width: 80%;
     height: 8px;
@@ -256,4 +240,19 @@ hr {
     border: 0 none;
     margin-bottom:40px;
     margin-top:220px;
+}
+p.users {
+    color : white;
+    padding: 10px 10px 10px 5px;
+    width: 30%;
+    text-align : center;
+    margin-left : 35%;
+    border: 6px solid;
+    border-image-source: linear-gradient(30deg, #febf53 40%, #fe5353 60%);
+    border-image-slice: 1;
+}
+.titreListe{
+    color: white;
+    text-align : center;
+    font-size : 30px;
 }
