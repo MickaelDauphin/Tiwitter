@@ -22,16 +22,14 @@
         ";
     }
 ?>
-    <script type="text/javascript">
-        var objectList = <?php echo $params['objectList'] ?>;
-    </script>
+
     <div class="blanc">
     <?php
-
     foreach ($params['user'] as $user) :?>
         <tr>
             <p class="tiwits">
-               Utilisateur<p2 class="pseudo"><?=$user->getUsername(); ?></a></p2>
+               Utilisateur<p2 class="pseudo"><?=
+                    $user->getId(); ?></a></p2>
                 <?php echo ":"?>
                 <br>
                 <br>

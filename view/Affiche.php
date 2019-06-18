@@ -21,9 +21,7 @@ if(isset($params['tiwitPosted'])) {
         ";
 }
 ?>
-<script type="text/javascript">
-    var objectList = <?php echo $params['objectList'] ?>;
-</script>
+
 <div class="blanc">
 <table>
     <?php

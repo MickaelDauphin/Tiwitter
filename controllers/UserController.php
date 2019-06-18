@@ -59,14 +59,11 @@ class UserController extends ControllerBase
         {
             if ($id != null)
             {
-
-                $this->app->getService('objectFinder')->ChangeState($this->app->getService('objectFinder')->findOneById($id));
-
                 $this->app->getService('redirect')('/home');
 
             }
             $user = $this->app->getService('userFinder')->findAll();
-            return $this->app->getService('render')('home', [ /*'app' => $this->app, 'objectList' => $this->app->getService('objectFinder')->findAllToJson()*/ 'user'=>$user]);
+            return $this->app->getService('render')('home', [ 'app' => $this->app,'user'=>$user]);
         }
         else
             return $this->app->getService('redirect')('/');
