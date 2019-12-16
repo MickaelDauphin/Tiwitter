@@ -1,4 +1,3 @@
 Projet fait par :
-
-    Rémy CRESPE
-    Mickaël DAUPHIN
+Rémy CRESPE
+[Mickaël DAUPHIN](https://github.com/mickou43/)
